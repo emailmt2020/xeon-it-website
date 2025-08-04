@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XEON IT | Enterprise AI Automation & Cloud Intelligence</title>
+    <meta name="description" content="Leading AI automation and cloud intelligence company providing enterprise solutions, custom AI development, cloud services, and digital transformation for businesses worldwide.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 25%, #16213e 50%, #0f3460 75%, #533483 100%);
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%);
+            position: relative;
+        }
+        .hero-gradient::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.3) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 20%, rgba(255, 119, 198, 0.3) 0%, transparent 50%),
+                        radial-gradient(circle at 40% 40%, rgba(120, 219, 255, 0.2) 0%, transparent 50%);
+            pointer-events: none;
+        }
+        .card-hover {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .card-hover:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.4);
+        }
+        .animate-fade-in {
+            animation: fadeIn 1s ease-out;
+        }
+        .animate-slide-up {
+            animation: slideUp 1s ease-out;
+        }
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(60px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        .glow {
+            box-shadow: 0 0 30px rgba(120, 119, 198, 0.4);
+        }
+        .text-gradient {
+            background: linear-gradient(135deg, #7877c6, #ff77c6, #78dbff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .border-gradient {
+            border: 2px solid transparent;
+            background: linear-gradient(white, white) padding-box,
+                        linear-gradient(135deg, #7877c6, #ff77c6) border-box;
+        }
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .neon-glow {
+            box-shadow: 0 0 20px rgba(120, 119, 198, 0.5), 0 0 40px rgba(120, 119, 198, 0.3);
+        }
+        .grid-pattern {
+            background-image: 
+                linear-gradient(rgba(120, 119, 198, 0.1) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(120, 119, 198, 0.1) 1px, transparent 1px);
+            background-size: 50px 50px;
+        }
+    </style>
+</head>
+<body class="bg-black text-white overflow-x-hidden">
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 glass-effect border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-10 h-10 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl flex items-center justify-center neon-glow">
+                            <i class="fas fa-brain text-white text-lg"></i>
+                        </div>
+                        <h1 class="text-3xl font-bold text-white">XEON IT</h1>
+                    </div>
+                </div>
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-gray-300 hover:text-white transition-colors duration-300 font-medium relative group">
+                        Home
+                        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-500 to-pink-500 transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                    <a href="#services" class="text-gray-300 hover:text-white transition-colors duration-300 font-medium relative group">
+                        Services
+                        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-500 to-pink-500 transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                    <a href="#about" class="text-gray-300 hover:text-white transition-colors duration-300 font-medium relative group">
+                        About
+                        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-500 to-pink-500 transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                    <a href="#portfolio" class="text-gray-300 hover:text-white transition-colors duration-300 font-medium relative group">
+                        Portfolio
+                        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-500 to-pink-500 transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                    <a href="#contact" class="text-gray-300 hover:text-white transition-colors duration-300 font-medium relative group">
+                        Contact
+                        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-500 to-pink-500 transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                </nav>
+                <button class="hidden md:block bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-3 rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-300 font-semibold glow">
+                    Get Started
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-32 pb-20 hero-gradient min-h-screen flex items-center relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="space-y-10 animate-fade-in">
+                    <div class="inline-flex items-center px-6 py-3 bg-purple-500/20 border border-purple-500/30 rounded-full text-purple-300 text-sm font-medium backdrop-blur-sm">
+                        <i class="fas fa-robot mr-3"></i>
+                        Enterprise AI Solutions
+                    </div>
+                    <h1 class="text-6xl md:text-8xl font-black leading-tight">
+                        <span class="text-white">Enterprise</span>
+                        <span class="text-gradient block">AI Automation</span>
+                        <span class="text-white">& Cloud Intelligence</span>
+                    </h1>
+                    <p class="text-2xl text-gray-300 leading-relaxed max-w-2xl">
+                        We transform businesses through cutting-edge AI automation and cloud intelligence solutions. 
+                        From custom AI development to cloud infrastructure, we help companies thrive in the digital age.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-6">
+                        <button class="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-10 py-4 rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-300 font-bold text-lg flex items-center gap-3 glow">
+                            Get Started
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                        <button class="border-gradient text-white px-10 py-4 rounded-xl hover:bg-white hover:text-black transition-all duration-300 font-bold text-lg">
+                            Learn More
+                        </button>
+                    </div>
+                    <div class="grid grid-cols-3 gap-8 pt-12">
+                        <div class="text-center">
+                            <div class="text-4xl font-black text-purple-400">500+</div>
+                            <div class="text-gray-400 font-medium">AI Projects Completed</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-4xl font-black text-pink-400">50+</div>
+                            <div class="text-gray-400 font-medium">Enterprise Clients</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-4xl font-black text-cyan-400">24/7</div>
+                            <div class="text-gray-400 font-medium">AI Support</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative animate-slide-up">
+                    <div class="glass-effect rounded-3xl p-10 border border-white/10">
+                        <div class="grid grid-cols-2 gap-8">
+                            <div class="bg-gradient-to-br from-purple-500/20 to-purple-600/20 p-8 rounded-2xl border border-purple-500/30 animate-float">
+                                <i class="fas fa-robot text-4xl text-purple-400 mb-6"></i>
+                                <h3 class="font-bold text-white mb-3 text-lg">AI Automation</h3>
+                                <p class="text-sm text-gray-300">Intelligent process automation</p>
+                            </div>
+                            <div class="bg-gradient-to-br from-pink-500/20 to-pink-600/20 p-8 rounded-2xl border border-pink-500/30 animate-float" style="animation-delay: 1s;">
+                                <i class="fas fa-cloud text-4xl text-pink-400 mb-6"></i>
+                                <h3 class="font-bold text-white mb-3 text-lg">Cloud Intelligence</h3>
+                                <p class="text-sm text-gray-300">Smart cloud solutions</p>
+                            </div>
+                            <div class="bg-gradient-to-br from-cyan-500/20 to-cyan-600/20 p-8 rounded-2xl border border-cyan-500/30 animate-float" style="animation-delay: 2s;">
+                                <i class="fas fa-brain text-4xl text-cyan-400 mb-6"></i>
+                                <h3 class="font-bold text-white mb-3 text-lg">Machine Learning</h3>
+                                <p class="text-sm text-gray-300">Advanced ML models</p>
+                            </div>
+                            <div class="bg-gradient-to-br from-green-500/20 to-green-600/20 p-8 rounded-2xl border border-green-500/30 animate-float" style="animation-delay: 3s;">
+                                <i class="fas fa-chart-line text-4xl text-green-400 mb-6"></i>
+                                <h3 class="font-bold text-white mb-3 text-lg">Data Analytics</h3>
+                                <p class="text-sm text-gray-300">Insightful analytics</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-24 bg-gradient-to-b from-black to-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-20">
+                <div class="inline-flex items-center px-6 py-3 bg-purple-500/20 border border-purple-500/30 rounded-full text-purple-300 text-sm font-medium mb-6 backdrop-blur-sm">
+                    <i class="fas fa-cogs mr-3"></i>
+                    Our Services
+                </div>
+                <h2 class="text-5xl md:text-6xl font-black text-white mb-6">AI & Cloud Services</h2>
+                <p class="text-2xl text-gray-300 max-w-4xl mx-auto">
+                    We provide comprehensive AI automation and cloud intelligence solutions to help your business thrive in the digital era.
+                </p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+                <div class="glass-effect p-10 rounded-2xl card-hover">
+                    <div class="w-20 h-20 bg-gradient-to-br from-purple-500/30 to-purple-600/30 rounded-2xl flex items-center justify-center mb-8 border border-purple-500/30">
+                        <i class="fas fa-robot text-3xl text-purple-400"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-6">AI Process Automation</h3>
+                    <p class="text-gray-300 mb-8 text-lg">
+                        Automate repetitive tasks and workflows with intelligent AI solutions that learn and adapt to your business processes.
+                    </p>
+                    <ul class="text-gray-400 space-y-3">
+                        <li class="flex items-center"><i class="fas fa-check text-green-400 mr-3"></i>Workflow Automation</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-400 mr-3"></i>Intelligent Document Processing</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-400 mr-3"></i>Predictive Analytics</li>
+                    </ul>
+                </div>
+                <div class="glass-effect p-10 rounded-2xl card-hover">
+                    <div class="w-20 h-20 bg-gradient-to-br from-pink-500/30 to-pink-600/30 rounded-2xl flex items-center justify-center mb-8 border border-pink-500/30">
+                        <i class="fas fa-cloud text-3xl text-pink-400"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-6">Cloud Intelligence</h3>
+                    <p class="text-gray-300 mb-8 text-lg">
+                        Leverage the power of cloud computing with intelligent solutions that optimize performance and reduce costs.
+                    </p>
+                    <ul class="text-gray-400 space-y-3">
+                        <li class="flex items-center"><i class="fas fa-check text-green-400 mr-3"></i>Cloud Migration</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-400 mr-3"></i>Intelligent Resource Management</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-400 mr-3"></i>Scalable Infrastructure</li>
+                    </ul>
+                </div>
+                <div class="glass-effect p-10 rounded-2xl card-hover">
+                    <div class="w-20 h-20 bg-gradient-to-br from-cyan-500/30 to-cyan-600/30 rounded-2xl flex items-center justify-center mb-8 border border-cyan-500/30">
+                        <i class="fas fa-brain text-3xl text-cyan-400"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-6">Machine Learning Solutions</h3>
+                    <p class="text-gray-300 mb-8 text-lg">
+                        Build and deploy custom machine learning models that provide actionable insights and drive business growth.
+                    </p>
+                    <ul class="text-gray-400 space-y-3">
+                        <li class="flex items-center"><i class="fas fa-check text-green-400 mr-3"></i>Custom ML Models</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-400 mr-3"></i>Natural Language Processing</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-400 mr-3"></i>Computer Vision</li>
+                    </ul>
+                </div>
+                <div class="glass-effect p-10 rounded-2xl card-hover">
+                    <div class="w-20 h-20 bg-gradient-to-br from-green-500/30 to-green-600/30 rounded-2xl flex items-center justify-center mb-8 border border-green-500/30">
+                        <i class="fas fa-chart-line text-3xl text-green-400"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-6">Data Analytics & BI</h3>
+                    <p class="text-gray-300 mb-8 text-lg">
+                        Transform your data into actionable insights with advanced analytics and business intelligence solutions.
+                    </p>
+                    <ul class="text-gray-400 space-y-3">
+                        <li class="flex items-center"><i class="fas fa-check text-green-400 mr-3"></i>Real-time Analytics</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-400 mr-3"></i>Predictive Modeling</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-400 mr-3"></i>Interactive Dashboards</li>
+                    </ul>
+                </div>
+                <div class="glass-effect p-10 rounded-2xl card-hover">
+                    <div class="w-20 h-20 bg-gradient-to-br from-red-500/30 to-red-600/30 rounded-2xl flex items-center justify-center mb-8 border border-red-500/30">
+                        <i class="fas fa-shield-alt text-3xl text-red-400"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-6">AI Security & Compliance</h3>
+                    <p class="text-gray-300 mb-8 text-lg">
+                        Ensure your AI systems are secure and compliant with industry standards and regulations.
+                    </p>
+                    <ul class="text-gray-400 space-y-3">
+                        <li class="flex items-center"><i class="fas fa-check text-green-400 mr-3"></i>AI Security Audits</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-400 mr-3"></i>Compliance Monitoring</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-400 mr-3"></i>Data Protection</li>
+                    </ul>
+                </div>
+                <div class="glass-effect p-10 rounded-2xl card-hover">
+                    <div class="w-20 h-20 bg-gradient-to-br from-indigo-500/30 to-indigo-600/30 rounded-2xl flex items-center justify-center mb-8 border border-indigo-500/30">
+                        <i class="fas fa-cogs text-3xl text-indigo-400"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-6">AI Integration Services</h3>
+                    <p class="text-gray-300 mb-8 text-lg">
+                        Seamlessly integrate AI capabilities into your existing systems and workflows.
+                    </p>
+                    <ul class="text-gray-400 space-y-3">
+                        <li class="flex items-center"><i class="fas fa-check text-green-400 mr-3"></i>API Integration</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-400 mr-3"></i>Legacy System Modernization</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-400 mr-3"></i>Third-party Integrations</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 bg-black">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <div class="inline-flex items-center px-6 py-3 bg-pink-500/20 border border-pink-500/30 rounded-full text-pink-300 text-sm font-medium mb-8 backdrop-blur-sm">
+                        <i class="fas fa-info-circle mr-3"></i>
+                        About Us
+                    </div>
+                    <h2 class="text-5xl md:text-6xl font-black text-white mb-8">About XEON IT</h2>
+                    <p class="text-xl text-gray-300 mb-8 leading-relaxed">
+                        XEON IT is a leading enterprise AI automation and cloud intelligence company dedicated to transforming businesses through cutting-edge artificial intelligence solutions. We combine deep expertise in machine learning, cloud computing, and data analytics to deliver innovative solutions that drive growth and efficiency.
+                    </p>
+                    <p class="text-xl text-gray-300 mb-12 leading-relaxed">
+                        Our team of AI experts and cloud specialists work closely with enterprises to understand their unique challenges and develop tailored solutions that deliver measurable results. From process automation to intelligent data analytics, we help organizations harness the power of AI to stay competitive in today's rapidly evolving digital landscape.
+                    </p>
+                    <div class="grid grid-cols-2 gap-8">
+                        <div class="text-center">
+                            <div class="text-4xl font-black text-purple-400 mb-3">10+</div>
+                            <div class="text-gray-400 font-medium">Years Experience</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-4xl font-black text-pink-400 mb-3">100+</div>
+                            <div class="text-gray-400 font-medium">AI Experts</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-4xl font-black text-cyan-400 mb-3">99%</div>
+                            <div class="text-gray-400 font-medium">Client Satisfaction</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-4xl font-black text-green-400 mb-3">24/7</div>
+                            <div class="text-gray-400 font-medium">AI Support</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="glass-effect rounded-3xl p-12 border border-white/10">
+                    <h3 class="text-3xl font-black text-white mb-8">Our Mission</h3>
+                    <p class="text-xl text-gray-300 mb-8 leading-relaxed">
+                        To democratize AI technology and make enterprise-grade artificial intelligence accessible to businesses of all sizes, enabling them to achieve unprecedented levels of efficiency and innovation.
+                    </p>
+                    <h3 class="text-3xl font-black text-white mb-8">Our Vision</h3>
+                    <p class="text-xl text-gray-300 leading-relaxed">
+                        To be the global leader in AI automation and cloud intelligence, driving the future of enterprise technology and creating a world where AI enhances human potential.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-24 bg-gradient-to-b from-gray-900 to-black">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-20">
+                <div class="inline-flex items-center px-6 py-3 bg-green-500/20 border border-green-500/30 rounded-full text-green-300 text-sm font-medium mb-6 backdrop-blur-sm">
+                    <i class="fas fa-trophy mr-3"></i>
+                    Success Stories
+                </div>
+                <h2 class="text-5xl md:text-6xl font-black text-white mb-6">Our AI Success Stories</h2>
+                <p class="text-2xl text-gray-300 max-w-4xl mx-auto">
+                    Discover how we've helped enterprises transform their operations with AI automation and cloud intelligence solutions.
+                </p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+                <div class="glass-effect rounded-2xl overflow-hidden card-hover">
+                    <div class="h-56 bg-gradient-to-br from-purple-500/20 to-pink-600/20 flex items-center justify-center border-b border-white/10">
+                        <i class="fas fa-industry text-8xl text-purple-400"></i>
+                    </div>
+                    <div class="p-10">
+                        <h3 class="text-2xl font-bold text-white mb-4">Manufacturing AI</h3>
+                        <p class="text-gray-300 mb-6 text-lg">
+                            Implemented predictive maintenance and quality control AI systems for a leading manufacturer, reducing downtime by 40% and improving product quality by 25%.
+                        </p>
+                        <div class="flex flex-wrap gap-3">
+                            <span class="px-4 py-2 bg-purple-500/20 text-purple-400 text-sm rounded-full border border-purple-500/30">Machine Learning</span>
+                            <span class="px-4 py-2 bg-green-500/20 text-green-400 text-sm rounded-full border border-green-500/30">IoT Integration</span>
+                            <span class="px-4 py-2 bg-pink-500/20 text-pink-400 text-sm rounded-full border border-pink-500/30">Predictive Analytics</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="glass-effect rounded-2xl overflow-hidden card-hover">
+                    <div class="h-56 bg-gradient-to-br from-green-500/20 to-cyan-600/20 flex items-center justify-center border-b border-white/10">
+                        <i class="fas fa-university text-8xl text-green-400"></i>
+                    </div>
+                    <div class="p-10">
+                        <h3 class="text-2xl font-bold text-white mb-4">Financial Services AI</h3>
+                        <p class="text-gray-300 mb-6 text-lg">
+                            Developed fraud detection and risk assessment AI models for a major bank, improving detection accuracy by 95% and reducing false positives by 60%.
+                        </p>
+                        <div class="flex flex-wrap gap-3">
+                            <span class="px-4 py-2 bg-purple-500/20 text-purple-400 text-sm rounded-full border border-purple-500/30">Deep Learning</span>
+                            <span class="px-4 py-2 bg-green-500/20 text-green-400 text-sm rounded-full border border-green-500/30">Real-time Processing</span>
+                            <span class="px-4 py-2 bg-pink-500/20 text-pink-400 text-sm rounded-full border border-pink-500/30">Security AI</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="glass-effect rounded-2xl overflow-hidden card-hover">
+                    <div class="h-56 bg-gradient-to-br from-pink-500/20 to-purple-600/20 flex items-center justify-center border-b border-white/10">
+                        <i class="fas fa-shopping-cart text-8xl text-pink-400"></i>
+                    </div>
+                    <div class="p-10">
+                        <h3 class="text-2xl font-bold text-white mb-4">E-commerce AI</h3>
+                        <p class="text-gray-300 mb-6 text-lg">
+                            Built personalized recommendation engine and inventory optimization AI for an e-commerce platform, increasing sales by 35% and reducing inventory costs by 20%.
+                        </p>
+                        <div class="flex flex-wrap gap-3">
+                            <span class="px-4 py-2 bg-purple-500/20 text-purple-400 text-sm rounded-full border border-purple-500/30">Recommendation Engine</span>
+                            <span class="px-4 py-2 bg-green-500/20 text-green-400 text-sm rounded-full border border-green-500/30">Inventory Optimization</span>
+                            <span class="px-4 py-2 bg-pink-500/20 text-pink-400 text-sm rounded-full border border-pink-500/30">Personalization</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 bg-black">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-20">
+                <div class="inline-flex items-center px-6 py-3 bg-orange-500/20 border border-orange-500/30 rounded-full text-orange-300 text-sm font-medium mb-6 backdrop-blur-sm">
+                    <i class="fas fa-envelope mr-3"></i>
+                    Get In Touch
+                </div>
+                <h2 class="text-5xl md:text-6xl font-black text-white mb-6">Ready to Transform Your Business?</h2>
+                <p class="text-2xl text-gray-300 max-w-4xl mx-auto">
+                    Let's discuss how our AI automation and cloud intelligence solutions can help your enterprise achieve its goals.
+                </p>
+            </div>
+            <div class="grid lg:grid-cols-2 gap-16">
+                <div>
+                    <form class="space-y-8">
+                        <div class="grid md:grid-cols-2 gap-8">
+                            <div>
+                                <label class="block text-lg font-semibold text-gray-300 mb-3">First Name</label>
+                                <input type="text" class="w-full px-6 py-4 bg-gray-900/50 border border-gray-700 rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-transparent text-white placeholder-gray-400 backdrop-blur-sm">
+                            </div>
+                            <div>
+                                <label class="block text-lg font-semibold text-gray-300 mb-3">Last Name</label>
+                                <input type="text" class="w-full px-6 py-4 bg-gray-900/50 border border-gray-700 rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-transparent text-white placeholder-gray-400 backdrop-blur-sm">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-lg font-semibold text-gray-300 mb-3">Email</label>
+                            <input type="email" class="w-full px-6 py-4 bg-gray-900/50 border border-gray-700 rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-transparent text-white placeholder-gray-400 backdrop-blur-sm">
+                        </div>
+                        <div>
+                            <label class="block text-lg font-semibold text-gray-300 mb-3">Company</label>
+                            <input type="text" class="w-full px-6 py-4 bg-gray-900/50 border border-gray-700 rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-transparent text-white placeholder-gray-400 backdrop-blur-sm">
+                        </div>
+                        <div>
+                            <label class="block text-lg font-semibold text-gray-300 mb-3">Message</label>
+                            <textarea rows="6" class="w-full px-6 py-4 bg-gray-900/50 border border-gray-700 rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-transparent text-white placeholder-gray-400 backdrop-blur-sm"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white py-6 rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-300 font-bold text-xl glow">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+                <div class="space-y-12">
+                    <div>
+                        <h3 class="text-3xl font-black text-white mb-8">Get in Touch</h3>
+                        <div class="space-y-6">
+                            <div class="flex items-center">
+                                <div class="w-16 h-16 bg-gradient-to-br from-purple-500/30 to-purple-600/30 rounded-2xl flex items-center justify-center mr-6 border border-purple-500/30">
+                                    <i class="fas fa-envelope text-purple-400 text-xl"></i>
+                                </div>
+                                <div>
+                                    <div class="font-bold text-white text-lg">Email</div>
+                                    <div class="text-gray-300 text-lg">hub@xeonit.co.uk</div>
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-16 h-16 bg-gradient-to-br from-pink-500/30 to-pink-600/30 rounded-2xl flex items-center justify-center mr-6 border border-pink-500/30">
+                                    <i class="fas fa-phone text-pink-400 text-xl"></i>
+                                </div>
+                                <div>
+                                    <div class="font-bold text-white text-lg">Phone</div>
+                                    <div class="text-gray-300 text-lg">(+44) 0201235456</div>
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-16 h-16 bg-gradient-to-br from-cyan-500/30 to-cyan-600/30 rounded-2xl flex items-center justify-center mr-6 border border-cyan-500/30">
+                                    <i class="fas fa-map-marker-alt text-cyan-400 text-xl"></i>
+                                </div>
+                                <div>
+                                    <div class="font-bold text-white text-lg">Office</div>
+                                    <div class="text-gray-300 text-lg">64 St Margrets Road, Edgware, London HA89UU</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="glass-effect p-8 rounded-2xl border border-white/10">
+                        <h4 class="text-2xl font-bold text-white mb-6">Why Choose XEON IT?</h4>
+                        <ul class="space-y-4 text-gray-300 text-lg">
+                            <li class="flex items-center"><i class="fas fa-check text-green-400 mr-4"></i>Expert AI Development Team</li>
+                            <li class="flex items-center"><i class="fas fa-check text-green-400 mr-4"></i>Proven Enterprise Solutions</li>
+                            <li class="flex items-center"><i class="fas fa-check text-green-400 mr-4"></i>24/7 AI Support & Monitoring</li>
+                            <li class="flex items-center"><i class="fas fa-check text-green-400 mr-4"></i>Scalable Cloud Infrastructure</li>
+                            <li class="flex items-center"><i class="fas fa-check text-green-400 mr-4"></i>Custom AI Integration</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white py-20 border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-12">
+                <div>
+                    <div class="flex items-center space-x-3 mb-6">
+                        <div class="w-10 h-10 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl flex items-center justify-center">
+                            <i class="fas fa-brain text-white text-lg"></i>
+                        </div>
+                        <h3 class="text-3xl font-bold text-white">XEON IT</h3>
+                    </div>
+                    <p class="text-gray-400 mb-6 text-lg">
+                        Enterprise AI Automation & Cloud Intelligence solutions for the modern business.
+                    </p>
+                    <div class="flex space-x-6">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">
+                            <i class="fab fa-linkedin text-2xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">
+                            <i class="fab fa-twitter text-2xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">
+                            <i class="fab fa-facebook text-2xl"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-xl font-bold mb-6">AI Services</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition-colors duration-300">AI Process Automation</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors duration-300">Machine Learning</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors duration-300">Cloud Intelligence</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors duration-300">Data Analytics</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-xl font-bold mb-6">Company</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition-colors duration-300">About Us</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors duration-300">Our Team</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors duration-300">Careers</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors duration-300">News</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-xl font-bold mb-6">Support</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition-colors duration-300">Documentation</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors duration-300">API Reference</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors duration-300">Contact Support</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors duration-300">Status Page</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-white/10 mt-16 pt-8 text-center text-gray-400">
+                <p class="text-lg">&copy; 2024 XEON IT. All rights reserved. | Enterprise AI Automation & Cloud Intelligence</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add fade-in animation to elements as they come into view
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fade-in');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all sections
+        document.querySelectorAll('section').forEach(section => {
+            observer.observe(section);
+        });
+
+        // Add parallax effect to hero section
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const parallax = document.querySelector('.hero-gradient');
+            if (parallax) {
+                const speed = scrolled * 0.5;
+                parallax.style.transform = `translateY(${speed}px)`;
+            }
+        });
+    </script>
+</body>
+</html> 
